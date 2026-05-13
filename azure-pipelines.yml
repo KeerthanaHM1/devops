@@ -18,5 +18,6 @@ steps:
 
 - script: |
     echo "Running the JAR file..."
-    java -jar deployed\*.jar
+    dir deployed
+    for %%f in (deployed\*.jar) do java -jar "%%f"
   displayName: 'Run Application'
