@@ -45,7 +45,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>App</mainClass>
+                            <mainClass>com.devops.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
