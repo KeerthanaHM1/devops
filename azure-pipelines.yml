@@ -6,7 +6,7 @@ pool:
 
 steps:
 
-- script: mvn package
+- script: mvn clean package
   displayName: 'Build Maven Project'
 
 - script: |
@@ -17,6 +17,6 @@ steps:
   displayName: 'Simulate Deployment'
 
 - script: |
-    echo "Contents of deployed folder:"
-    dir deployed
-  displayName: 'Verify Deployment Output'
+    echo "Running the JAR file..."
+    java -jar deployed\*.jar
+  displayName: 'Run Application'
