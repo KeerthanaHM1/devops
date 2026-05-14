@@ -7,13 +7,13 @@ trigger:
   - main
 
 pool:
-  name: 'pool2'   # Name of your self-hosted agent pool
+  name: pool2
 
 steps:
 - task: Maven@3
   inputs:
-     mavenPomFile: 'pom.xml'
-     goals: 'package'
+    mavenPomFile: 'pom.xml'
+    goals: 'package'
 
 - script: |
     echo "Simulating deployment..."
